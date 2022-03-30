@@ -15,8 +15,8 @@ const Search = () => {
 
     const handleKeyDown = (event) =>{
         if(event.which === 13){
-            let link =  `http://www.omdbapi.com/?s=${searchText}&apikey=b47cf908` 
-            fetch(link)
+            let url =  `http://www.omdbapi.com/?s=${searchText}&apikey=b47cf908` 
+            fetch(url)
             .then(response => response.json())
             .then(data => {
                 if(data.Response === 'False'){
@@ -60,6 +60,8 @@ const Search = () => {
                {movies.map(movie => {
                    if(movie.Title && movie.Poster !== "N/A"){
                       return  <Movies key={movie.imdbID} url={movie.Poster} title={movie.Title}/>
+                   }else{
+                       return null;
                    }                   
                })}
                 <h1 id='message' style={{display:'none'}}>Movie Not Found</h1>
