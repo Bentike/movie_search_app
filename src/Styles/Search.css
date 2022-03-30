@@ -1,0 +1,29 @@
+.search{
+    width: 90%;
+    margin: 20px auto;
+}
+
+.search-field{
+    width: 100%;
+    padding: 5px;
+}
+
+.movie-container{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 10px;
+}
+
+@media only screen and (max-width: 900px){
+    .movie-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .movie-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav{
+    background-color: #292929;
+    color: #fff;
+    height: 50px;
+}
+
+.nav-text-wrapper{
+    width: 20%;
+}
+
+.brand{
+    border: 1px solid #fff;
+    display: inline-block;
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+@media only screen and (max-width: 900px){
+   .nav-text-wrapper{
+       margin: 0 auto;
+   }  
+}

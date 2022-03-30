@@ -1,0 +1,19 @@
+.banner{
+    background-image: url('../Styles/header.png');
+    height: 300px;
+    width: 100%;
+}
+
+.banner-text{
+    color: #fff;
+    font-size: 30px;
+    margin-left: 20px;
+    padding-top: 70px;
+    line-height: 1.3em;
+}
+
+@media only screen and (max-width: 900px){
+    .banner-text{
+        text-align: center;
+    }
+}
