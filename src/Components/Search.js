@@ -36,7 +36,7 @@ const Search = () => {
 
     //Default data that appears on page load
     useEffect(() => {
-        fetch(`https://www.omdbapi.com/?s=24 hours&apikey=b47cf908`)
+        fetch(`https://www.omdbapi.com/?s=merlin&apikey=b47cf908`)
         .then(response => response.json())
         .then(data => setMovies(data.Search))
         .catch(err => {
