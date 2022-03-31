@@ -25,10 +25,10 @@ const Search = () => {
                 }else{
                     message.style.display = 'none';
                     setMovies(data.Search)
-                    console.log(movies)
                 }
             })
             .catch(err => {
+                console.log(movies)
                 console.log("An Error Occur: " + err);
             });    
         }
