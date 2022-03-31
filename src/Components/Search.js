@@ -16,6 +16,7 @@ const Search = () => {
     const handleKeyDown = (event) =>{
         if(event.which === 13){
             let url =  `https://www.omdbapi.com/?s=${searchText}&apikey=b47cf908` 
+            console.log("fetching start...");
             fetch(url)
             .then(response => response.json())
             .then(data => {
@@ -28,7 +29,6 @@ const Search = () => {
                 }
             })
             .catch(err => {
-                console.log(movies)
                 console.log("An Error Occur: " + err);
             });    
         }
