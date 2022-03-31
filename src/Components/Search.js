@@ -21,10 +21,10 @@ const Search = () => {
             .then(response => response.json())
             .then(data => {
                 if(data.Response === 'False'){
-                    //message.style.display = 'block';
+                    message.style.display = 'block';
                     setMovies([])
                 }else{
-                    //message.style.display = 'none';
+                    message.style.display = 'none';
                     setMovies(data.Search)
                 }
             })
