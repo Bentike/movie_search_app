@@ -15,17 +15,15 @@ const Search = () => {
 
     const handleKeyDown = (event) =>{
         if(event.which === 13){
-            let url =  `https://www.omdbapi.com/?s=${searchText}&apikey=b47cf908` 
-            console.log(url);
-            fetch(url)
+            fetch(`https://www.omdbapi.com/?s=${searchText}&apikey=b47cf908`)
             .then(response => response.json())
             .then(data => {
                 if(data.Response === 'False'){
-                    message.style.display = 'block';
                     setMovies([])
+                    message.style.display = 'block';
                 }else{
-                    message.style.display = 'none';
                     setMovies(data.Search)
+                    message.style.display = 'none';
                 }
             })
             .catch(err => {
