@@ -2,8 +2,6 @@ import React, {useState, useEffect} from 'react';
 import Movies from './Movies';
 import '../Styles/Search.css';
 
-const message = document.getElementById('message');
-
 const Search = () => {
     const [searchText, setSearchText] = useState('');
 
@@ -19,11 +17,10 @@ const Search = () => {
             .then(response => response.json())
             .then(data => {
                 if(data.Response === 'False'){
-                    setMovies([])
-                    message.style.display = 'block';
+                    setMovies([]);
                 }else{
-                    setMovies(data.Search)
-                    message.style.display = 'none';
+                    setMovies([]);
+                    setMovies(data.Search);
                 }
             })
             .catch(err => {
@@ -56,14 +53,15 @@ const Search = () => {
               />
           </div>
           <div className='movie-container'>
-               {movies.map(movie => {
+            { movies.length  ? movies.map(movie => {
                    if(movie.Title && movie.Poster !== "N/A"){
                       return  <Movies key={movie.imdbID} url={movie.Poster} title={movie.Title}/>
                    }else{
                        return null;
                    }                   
-               })}
-                <h1 id='message' style={{display:'none'}}>Movie Not Found</h1>
+               })
+               : <h1>Movie Not Found</h1>
+            }
           </div>
       </React.Fragment>
     )
