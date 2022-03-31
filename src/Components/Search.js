@@ -15,7 +15,7 @@ const Search = () => {
 
     const handleKeyDown = (event) =>{
         if(event.which === 13){
-            let url =  `http://www.omdbapi.com/?s=${searchText}&apikey=b47cf908` 
+            let url =  `https://www.omdbapi.com/?s=${searchText}&apikey=b47cf908` 
             fetch(url)
             .then(response => response.json())
             .then(data => {
@@ -35,7 +35,7 @@ const Search = () => {
 
     //Default data that appears on page load
     useEffect(() => {
-        fetch(`http://www.omdbapi.com/?s=24 hours&apikey=b47cf908`)
+        fetch(`https://www.omdbapi.com/?s=24 hours&apikey=b47cf908`)
         .then(response => response.json())
         .then(data => setMovies(data.Search))
         .catch(err => {
