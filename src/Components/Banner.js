@@ -1,6 +1,5 @@
 import '../Styles/Banner.css';
 
-
 const Banner = () => {
     return(
         <div className="banner">
@@ -10,7 +9,7 @@ const Banner = () => {
                  Something
              </p>
         </div>
-    )
+    );
 }
 
 export default Banner;

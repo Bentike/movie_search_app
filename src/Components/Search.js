@@ -36,7 +36,7 @@ const Search = () => {
         .then(data => setMovies(data.Search))
         .catch(err => {
             console.log("An Error Occur: " + err);
-        })
+        });
     }, [])
 
     return(

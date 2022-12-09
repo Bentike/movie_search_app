@@ -8,7 +8,7 @@ const Nav = () => {
              <p className="brand">MyTestApp</p>
            </div>
         </div>
-    )
+    );
 }
 
 export default Nav;

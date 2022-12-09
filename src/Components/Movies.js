@@ -1,7 +1,6 @@
 import React from "react";
 import '../Styles/Movies.css';
 
-
 const Movies = (props) => {
    return(
        <React.Fragment>
@@ -10,7 +9,7 @@ const Movies = (props) => {
                 <p className="movie-text">{props.title}</p>
             </div>
        </React.Fragment>
-   )
+   );
 }
 
 export default Movies;
